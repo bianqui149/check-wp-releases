@@ -15,3 +15,5 @@ jobs:
     steps:
       - checkout
       - run: python --version
+      - install packages
+      - run: pip install requests && pip install bs4  
