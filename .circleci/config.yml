@@ -1,0 +1,17 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@2.1.1
+
+workflows:
+  test:  
+    jobs:
+      - build-and-test
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.11.1
+    steps:
+      - checkout
+      - run: python --version
